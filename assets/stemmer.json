@@ -1,0 +1,75 @@
+{
+  "resources": [
+    "assets/stemmer.ogg",
+    "assets/stemmer.m4a",
+    "assets/stemmer.mp3",
+    "assets/stemmer.ac3"
+  ],
+  "spritemap": {
+    "spikeren-au": {
+      "start": 0,
+      "end": 0.5268480725623583,
+      "loop": false
+    },
+    "spikeren-aukort": {
+      "start": 2,
+      "end": 2.308798185941043,
+      "loop": false
+    },
+    "spikeren-ja": {
+      "start": 4,
+      "end": 4.533492063492064,
+      "loop": false
+    },
+    "spikeren-jippi": {
+      "start": 6,
+      "end": 7.038956916099773,
+      "loop": false
+    },
+    "spikeren-wohoo": {
+      "start": 9,
+      "end": 9.535873015873015,
+      "loop": false
+    },
+    "vaktmesteren-feil": {
+      "start": 11,
+      "end": 12.817233560090703,
+      "loop": false
+    },
+    "vaktmesteren-flink": {
+      "start": 14,
+      "end": 15.390748299319728,
+      "loop": false
+    },
+    "vaktmesteren-hei-og-hjelp": {
+      "start": 17,
+      "end": 23.84501133786848,
+      "loop": false
+    },
+    "vaktmesteren-hei": {
+      "start": 25,
+      "end": 27.13904761904762,
+      "loop": false
+    },
+    "vaktmesteren-kjempebra": {
+      "start": 29,
+      "end": 29.729365079365078,
+      "loop": false
+    },
+    "vaktmesteren-sag": {
+      "start": 31,
+      "end": 32.76471655328798,
+      "loop": false
+    },
+    "vaktmesteren-skrujern": {
+      "start": 34,
+      "end": 35.776326530612245,
+      "loop": false
+    },
+    "vaktmesteren-supert": {
+      "start": 37,
+      "end": 37.72936507936508,
+      "loop": false
+    }
+  }
+}
