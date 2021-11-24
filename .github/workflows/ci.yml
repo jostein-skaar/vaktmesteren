@@ -12,9 +12,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Tag and create GitHub release
+      - name: Github Tag Bump
+        uses: anothrNick/github-tag-action@1.36.0
         id: tagstep
-        uses: anothrNick/github-tag-action@1.36
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           WITH_V: true
