@@ -1,0 +1,42 @@
+on:
+  push:
+    branches: [main]
+    paths-ignore:
+      - README.md
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Tag and create GitHub release
+        id: tagstep
+        uses: anothrNick/github-tag-action@1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          WITH_V: true
+          DRY_RUN: false
+
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      - run: npm install
+      - run: npm run build
+
+      - name: Replace version in files
+        uses: jostein-skaar/action-erstatninger@v1
+        with:
+          sok: '{VERSJON}'
+          erstatt: '${{steps.tagstep.outputs.tag}}'
+          filer: 'dist/**/*.{js,html}'
+          dry-run: false
+
+      - uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: dist
+          publish_branch: www
+          cname: vaktmesteren.fjaas.no
