@@ -1,7 +1,7 @@
 {
   "name": "Vaktmesteren",
   "short_name": "Vaktmesteren",
-  "theme_color": "#e33e3e",
+  "theme_color": "#000000",
   "background_color": "#fafafa",
   "display": "fullscreen",
   "orientation": "landscape",
