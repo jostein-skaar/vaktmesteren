@@ -144,7 +144,11 @@ export class Hovedsene extends Phaser.Scene {
       .setInteractive(new Phaser.Geom.Rectangle(-100, -100, 200, 200), Phaser.Geom.Rectangle.Contains)
       .on('pointerdown', () => this.lukk());
 
-    this.resultattekst = this.add.text(15, 20, this.hentResultattekst(), { fontFamily: 'arial', fontSize: '20px', fill: '#000' });
+    this.resultattekst = this.add.text(15, 20, this.hentResultattekst(), {
+      fontFamily: 'arial',
+      fontSize: '20px',
+      color: '#000',
+    });
 
     this.klokketekst = this.add.text(75, 150, '30', {
       fontFamily: 'arial',

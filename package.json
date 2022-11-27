@@ -1,16 +1,17 @@
 {
   "name": "vaktmesteren",
   "version": "0.0.0",
+  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
     "serve": "vite preview"
   },
   "devDependencies": {
-    "typescript": "^4.5.2",
-    "vite": "^2.6.14"
+    "typescript": "^4.9.3",
+    "vite": "^3.2.4"
   },
   "dependencies": {
-    "phaser": "3.24.1"
+    "phaser": "3.55.2"
   }
 }

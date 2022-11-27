@@ -24,7 +24,8 @@ export class Velkomstsene extends Phaser.Scene {
 
   create() {
     console.log('Her er vi');
-    const vaktmesteren = this.karakterVaktmesteren.create()
+    const vaktmesteren = this.karakterVaktmesteren
+      .create()
       .setInteractive()
       .once('pointerdown', () => this.startNyttSpill());
 
@@ -35,14 +36,19 @@ export class Velkomstsene extends Phaser.Scene {
       vaktmesteren.setScale(skalering);
     }
 
-    const startTekst = this.add.text(0, 200, 'Trykk på vaktmesteren for å starte spillet',
-      { fontFamily: 'arial', fontSize: '20px', fill: '#000', align: 'center' })
+    const startTekst = this.add
+      .text(0, 200, 'Trykk på vaktmesteren for å starte spillet', {
+        fontFamily: 'arial',
+        fontSize: '20px',
+        color: '#000',
+        align: 'center',
+      })
       .setOrigin(0.5, 0.5)
       .setInteractive()
       .once('pointerdown', () => this.startNyttSpill());
 
-    const versjonTekst = this.add.text(0, 225, 'Versjon {VERSJON}',
-      { fontFamily: 'arial', fontSize: '14px', fill: '#000', align: 'center' })
+    const versjonTekst = this.add
+      .text(0, 225, 'Versjon {VERSJON}', { fontFamily: 'arial', fontSize: '14px', color: '#000', align: 'center' })
       .setOrigin(0.5, 0.5);
 
     this.logoKonteiner = this.add.container(0, 0, [vaktmesteren, startTekst, versjonTekst]);
@@ -66,5 +72,4 @@ export class Velkomstsene extends Phaser.Scene {
   private ryddOpp() {
     this.karakterVaktmesteren.ryddOpp();
   }
-
 }
